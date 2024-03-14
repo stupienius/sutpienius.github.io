@@ -1,0 +1,65 @@
+main{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+}
+
+.rightdown,.rightup,.leftdown,.leftup{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+    height: 50%;
+}
+
+.leftup{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #ef9504;
+}
+.leftdown{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #25a19d;
+}
+.rightup{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #04ef91;
+}
+.rightdown{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: #4287923a;
+}
+
+p{
+    font-size: 300%;
+    background-color: #6912844a;
+    color: #10988d;
+}
+table{
+
+    border-collapse: collapse;;
+    font-size: 200%;
+}
+
+th, td {
+    border: 5px solid #b51616; /* 設置邊框寬度和顏色 */
+    padding: 5px; /* 設置內邊距 */
+    text-align: center; /* 設置文字對齊方式 */
+}
+
+th {
+    background-color: #219b91; /* 表頭背景色 */
+}
+
+sup{
+    font-size: 50%;
+}
+
