@@ -1,65 +1,37 @@
-main{
-    margin: 0;
-    height: 100vh;
-    display: flex;
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
 }
 
-.rightdown,.rightup,.leftdown,.leftup{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 50%;
-    height: 50%;
+.animated-element {
+  width: 50px;
+  height: 500px;
+  background-color: #7c5f10;
+  animation: bounce 0.5s infinite alternate;
+  /* 使用名為bounce的動畫，1秒循環一次，來回彈跳 */
 }
 
-.leftup{
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-color: #ef9504;
-}
-.leftdown{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    background-color: #25a19d;
-}
-.rightup{
-    position: absolute;
-    right: 0;
-    top: 0;
-    background-color: #04ef91;
-}
-.rightdown{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    background-color: #4287923a;
-}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
 
-p{
-    font-size: 300%;
-    background-color: #6912844a;
-    color: #10988d;
-}
-table{
+  25% {
+    transform: translateY(-45px);
+  }
 
-    border-collapse: collapse;;
-    font-size: 200%;
-}
+  50% {
+    transform: translateY(-50px);
+  }
 
-th, td {
-    border: 5px solid #b51616; /* 設置邊框寬度和顏色 */
-    padding: 5px; /* 設置內邊距 */
-    text-align: center; /* 設置文字對齊方式 */
-}
+  75% {
+    transform: translateY(-45px);
+  }
 
-th {
-    background-color: #219b91; /* 表頭背景色 */
+  100% {
+    transform: translateY(0);
+  }
 }
-
-sup{
-    font-size: 50%;
-}
-
