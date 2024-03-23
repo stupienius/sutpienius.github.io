@@ -1,62 +1,63 @@
-body{
-    backgoundcloor: red;
+body {
+  background-color: red;
 }
 
-.aronud{
-    height: 100%;
-    width: 100%;
-    color: aqua;
+.aronud {
+  height: 100%;
+  width: 100%;
+  color: aqua;
 }
+
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
-  
-  .icon-container {
-    margin-bottom: 50px;
-  }
-  
-  .icon-container img {
-    max-width: 100px;
-    height: auto;
-  }
-  
-  .button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-  
-  .button-container button {
-    padding: 10px 20px;
-    font-size: 10px;
-    position: absolute;
-  }
-  
-  .button-container button:nth-child(1) {
-    transform: translateX(0%) translateY(-100%) rotate(0deg);
-  }
-  
-  .button-container button:nth-child(2) {
-    transform: translateX(87%)translateY(-50%) rotate(60deg);
-  }
-  
-  .button-container button:nth-child(3) {
-    transform: translateX(87%)translateY(50%) rotate(120deg);
-  }
-  
-  .button-container button:nth-child(4) {
-    transform: translateX(0%) translateY(100%) rotate(180deg);
-  }
-  
-  .button-container button:nth-child(5) {
-    transform: translateX(-87%) translateY(50%) rotate(240deg);
-  }
-  
-  .button-container button:nth-child(6) {
-    transform: translateX(-87%) translateY(-50%) rotate(300deg);
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.icon-container {
+  margin-bottom: 50px;
+}
+
+.icon-container img {
+  max-width: 100px;
+  height: auto;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.button-container button {
+  padding: 10px 20px;
+  font-size: 10px;
+  position: absolute;
+}
+
+.button-container button:nth-child(1) {
+  transform: translateX(0%) translateY(-100%) rotate(0deg);
+}
+
+.button-container button:nth-child(2) {
+  transform: translateX(87%)translateY(-50%) rotate(60deg);
+}
+
+.button-container button:nth-child(3) {
+  transform: translateX(87%)translateY(50%) rotate(120deg);
+}
+
+.button-container button:nth-child(4) {
+  transform: translateX(0%) translateY(100%) rotate(0deg);
+}
+
+.button-container button:nth-child(5) {
+  transform: translateX(-87%) translateY(50%) rotate(240deg);
+}
+
+.button-container button:nth-child(6) {
+  transform: translateX(-87%) translateY(-50%) rotate(300deg);
+}
