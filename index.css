@@ -43,6 +43,7 @@ hr {
   align-items: center;
   height: 100px;
   width: 100px;
+  border-radius: 100px;
 }
 
 .button-container {
@@ -62,30 +63,39 @@ hr {
   font-size: 10px;
   box-shadow: inset 0px 0px 10px red;
   position: absolute;
+  text-align: center;
 }
 
-.button-container button:nth-child(1) {
+.button-container .about {
   transform: rotate(0deg);
   top: 90px;
 }
 
 .button-container button:nth-child(2) {
-  transform: translateX(87%)translateY(-50%) rotate(60deg);
+  transform: rotate(60deg);
+  top: 125px;
+  left: 229px;
 }
 
 .button-container button:nth-child(3) {
-  transform: translateX(87%)translateY(50%) rotate(120deg);
+  transform: rotate(120deg);
+  top: 191px;
+  left: 229px;
 }
 
 .button-container button:nth-child(4) {
-  transform: translateX(0%) translateY(100%) rotate(180deg);
-  bottom: 175px;
+  transform: rotate(180deg);
+  bottom: 140px;
 }
 
 .button-container button:nth-child(5) {
-  transform: translateX(-87%) translateY(50%) rotate(240deg);
+  transform: rotate(240deg);
+  bottom: 174px;
+  left: 111px;
 }
 
 .button-container button:nth-child(6) {
-  transform: translateX(-87%) translateY(-50%) rotate(300deg);
+  transform: rotate(300deg);
+  top: 123px;
+  left: 111px;
 }
