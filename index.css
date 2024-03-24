@@ -2,6 +2,15 @@ body {
   background-color: red;
 }
 
+
+p {
+  height: auto;
+  width: 50%;
+  background-color: antiquewhite;
+  color: blue;
+  text-align: center;
+}
+
 hr {
   color: rgb(80, 40, 173);
 }
