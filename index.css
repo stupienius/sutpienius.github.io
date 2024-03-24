@@ -31,16 +31,23 @@ hr {
 }
 
 .head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 50px;
 }
 
 .head img {
-  max-width: 100px;
-  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
 }
 
 .button-container {
-  background-color: rgb(102, 66, 136);
+  height: 400px;
+  width: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,7 +66,7 @@ hr {
 
 .button-container button:nth-child(1) {
   transform: rotate(0deg);
-
+  top: 90px;
 }
 
 .button-container button:nth-child(2) {
@@ -71,7 +78,8 @@ hr {
 }
 
 .button-container button:nth-child(4) {
-  transform: translateX(0%) translateY(100%) rotate(0deg);
+  transform: translateX(0%) translateY(100%) rotate(180deg);
+  bottom: 175px;
 }
 
 .button-container button:nth-child(5) {
