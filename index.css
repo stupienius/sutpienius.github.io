@@ -2,6 +2,10 @@ body {
   background-color: red;
 }
 
+hr {
+  color: rgb(80, 40, 173);
+}
+
 .aronud {
   height: 100%;
   width: 100%;
