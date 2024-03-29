@@ -1,3 +1,27 @@
+header {
+  position: relative;
+  height: 70px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: azure;
+  border-radius: 0 0 20px 20px;
+}
+
+header h1 {
+
+  height: 30px;
+  width: 95%;
+  text-align: center;
+}
+
+.contact {
+  height: 20px;
+  background-color: yellowgreen;
+}
+
+
+
 body {
   background-color: red;
 }
