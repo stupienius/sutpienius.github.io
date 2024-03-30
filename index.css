@@ -16,6 +16,7 @@ header h1 {
   width: 95%;
   margin-top: 7px;
   text-align: center;
+  box-shadow: 10px 10px 0 20px red;
 }
 
 .contact {
