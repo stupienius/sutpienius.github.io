@@ -20,6 +20,8 @@ header h1 {
   width: 95%;
   margin-top: 7px;
   text-align: center;
+  font-size: 6vw;
+  font-family: 'Arial Blackcursive', Courier, monospace;
   color: #feffae;
   text-shadow: 2px 2px 10px red;
 }
