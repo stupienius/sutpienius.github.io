@@ -26,11 +26,6 @@ header h1 {
   text-shadow: 2px 2px 10px red;
 }
 
-img {
-  height: 100%;
-  width: 100%;
-}
-
 .contact {
   position: absolute;
   height: 20px;
@@ -41,6 +36,7 @@ img {
 }
 
 .contact * {
+  height: 25px;
   background-color: #6d6d6d;
   border-radius: 5px;
   margin-left: 10px;
@@ -60,7 +56,12 @@ a {
 }
 
 main {
-  height: 500px;
+  height: auto;
+  width: 100%;
+}
+
+img {
+  height: 100%;
   width: 100%;
 }
 
