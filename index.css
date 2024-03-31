@@ -41,7 +41,7 @@ header h1 {
 }
 
 .contact * {
-  height: 25px;
+  height: 40px;
   background-color: #6d6d6d;
   border-radius: 5px;
   margin-left: 10px;
@@ -49,8 +49,8 @@ header h1 {
 
 header i {
   position: relative;
-  height: 10px;
-  width: 10px;
+  height: 40px;
+  width: 40px;
   color: white;
 }
 
