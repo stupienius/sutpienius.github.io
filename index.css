@@ -47,14 +47,14 @@ header h1 {
   margin-left: 10px;
 }
 
-i {
+header i {
   position: relative;
   height: 10px;
   width: 10px;
   color: white;
 }
 
-a {
+header a {
   margin-left: 5px;
   color: white;
   text-decoration: none;
@@ -74,8 +74,8 @@ img {
 
 .about {
   position: absolute;
-  height: 280px;
-  width: 300px;
+  height: 50%;
+  width: 55%;
   top: 10%;
   left: 7%;
   background-color: #4949499a;
@@ -95,6 +95,11 @@ main h6 {
 }
 
 main p {
+  height: 75%;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
   position: relative;
   color: #ffd036;
   text-shadow: 1px 1px 2px #ffd040;
