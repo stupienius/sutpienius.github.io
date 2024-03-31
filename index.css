@@ -72,16 +72,6 @@ img {
   z-index: -1;
 }
 
-.about {
-  position: absolute;
-  height: 50%;
-  width: 55%;
-  top: 10%;
-  left: 7%;
-  background-color: #4949499a;
-  box-shadow: 0 0 3px yellow, inset 0px 50px 20px 0px rgb(200, 200, 0);
-  border-radius: 3px;
-}
 
 main h6 {
   position: relative;
@@ -99,21 +89,31 @@ main p {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10px;
+  margin-top: 20px;
   position: relative;
   color: #ffd036;
   text-shadow: 1px 1px 2px #ffd040;
 }
 
-.project {
+.info div {
   position: absolute;
-  height: 100px;
-  width: 100px;
-  top: 45%;
-  left: 60%;
   background-color: #4949499a;
-  box-shadow: 0 0 3px 1px yellow;
+  box-shadow: 0 0 3px yellow, inset 0px 50px 10px rgb(200, 200, 0);
   border-radius: 3px;
+}
+
+.about {
+  height: 50%;
+  width: 55%;
+  top: 10%;
+  left: 7%;
+}
+
+.project{
+  height: 45%;
+  width: 50%;
+  top: 55%;
+  right: 7%;
 }
 
 
