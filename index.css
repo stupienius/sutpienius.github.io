@@ -1,6 +1,5 @@
 * {
   margin: 0px;
-  overflow: hidden;
 }
 
 body {
@@ -36,7 +35,7 @@ header h1 {
   position: absolute;
   height: 10px;
   width: 100%;
-  bottom: 5%;
+  bottom: 20%;
   display: flex;
   justify-content: center;
 }
@@ -46,6 +45,7 @@ header h1 {
   background-color: #6d6d6d;
   border-radius: 5px;
   margin-left: 10px;
+  display: flex;
 }
 
 header i {
@@ -53,6 +53,7 @@ header i {
   height: 18px;
   width: 18px;
   color: white;
+  margin-right: -10px;
 }
 
 header a {
@@ -60,6 +61,7 @@ header a {
   margin-left: 0px;
   color: white;
   text-decoration: none;
+  overflow: hidden;
 }
 
 main {
