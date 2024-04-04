@@ -51,6 +51,7 @@ header h1 {
 
 header i {
   position: relative;
+  left: -5px;
   height: 18px;
   width: 18px;
   color: white;
@@ -59,7 +60,6 @@ header i {
 
 header a {
   position: relative;
-  margin-left: 0px;
   color: white;
   text-decoration: none;
   overflow: hidden;
@@ -78,16 +78,16 @@ img {
 }
 
 
-.info h6 {
+.info h4 {
   position: relative;
   margin-left: auto;
   margin-right: auto;
   height: 13%;
-  width: 50%;
+  width: 65%;
   top: 9px;
   display: grid;
   place-items: center;
-  font-size: 150%;
+  font-size: 230%;
   color: #000;
   font-family: Arial Black;
   background-color: #e6ff03c5;
@@ -103,7 +103,7 @@ img {
   margin-left: auto;
   margin-right: auto;
   top: 0;
-  padding: 17% 3% 3% 3%;
+  padding: 18% 3% 3% 3%;
   border-radius: 10px;
   color: #ffd036;
   text-shadow: 1px 1px 2px #ffd040;
