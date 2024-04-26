@@ -147,15 +147,15 @@ img {
 }
 
 .about {
-  height: 10%;
-  width: 45%;
+  height: 500px;
+  min-width: 250px;
   top: 2%;
   left: 7%;
 }
 
 .project{
   height: 9%;
-  width: 50%;
+  min-width: 280px;
   top: 11%;
   right: 7%;
 }
