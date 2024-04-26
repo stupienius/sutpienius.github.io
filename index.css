@@ -37,40 +37,35 @@ header h1 {
   text-shadow: 2px 2px 10px red;
 }
 
-.contact {
+header .contact {
   position: absolute;
   height: 10px;
   width: 100%;
   bottom: 20%;
   display: flex;
+  gap: 20px;
   justify-content: center;
 }
 
-.contact div {
-  position: relative;
+header .contact div {
   height: 30px;
   width: 150px;
   background-color: #6d6d6d;
   border: 0.5px solid black;
   border-radius: 5px;
-  margin-left: 30px;
   display: flex;
+  gap: 10px;
+  align-items: center;
   justify-content: center;
-
 }
 
-.contact i {
-  position: absolute;
-  top: 25%;
-  left: 3px;
+header .contact i {
   height: 18px;
   width: 18px;
   color: white;
-  margin-right: -10px;
 }
 
-.contact a {
-  position: relative;
+header .contact a {
   display: grid;
   font-size: 1.5rem;
   place-items: center;
@@ -85,7 +80,7 @@ main {
   width: 100%;
 }
 
-img {
+main img {
   position: fixed;
   top: 0px;
   left: 25vw;
@@ -96,7 +91,7 @@ img {
 }
 
 
-.info h4 {
+main .info h4 {
   position: relative;
   margin-left: auto;
   margin-right: auto;
@@ -114,7 +109,7 @@ img {
   z-index: 2;
 }
 
-.info ul {
+main .info ul {
   position: absolute;
   height: 75%;
   width: 100%;
@@ -131,50 +126,50 @@ img {
   z-index: 1;
 }
 
-.info lu li {
+main .info lu li {
   position: relative;
   padding: 20px;
 }
 
-.info a{
+main .info a{
     text-decoration: none;
     color: #ffd036;
   text-shadow: 1px 1px 2px #ffd040;
 }
 
-.info div {
+main .info div {
   position: absolute;
 }
 
-.about {
+main .info .about {
   height: 500px;
   min-width: 250px;
   top: 2%;
   left: 7%;
 }
 
-.project{
+main .info .project{
   height: 9%;
   min-width: 280px;
   top: 11%;
   right: 7%;
 }
 
-.blog{
+main .info .blog{
   height: 8%;
   width: 50%;
   top: 19%;
   left: 7%;
 }
 
-.interests{
+main .info .interests{
   height: 8%;
   width: 50%;
   top: 26%;
   right: 10%;
 }
 
-.Activity{
+main .info .Activity{
   height: 8%;
   width: 50%;
   top: 33%;
@@ -195,4 +190,24 @@ footer p {
   width: 100%;
   color: white;
   text-align: right;
+}
+
+@media screen and (max-width:1024px){
+  header {
+    height: 95px;
+  }
+  header h1{
+    font-size: 50px;
+  }
+  header .contact{
+    gap: 10px;
+    bottom: 30%;
+  }
+  header .contact div{
+    background-color: #ffffff00;
+    width: 30px;
+  }
+  header .contact  a {
+    display:none;
+  }
 }
