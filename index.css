@@ -55,7 +55,7 @@ header .contact {
 header .contact div {
   height: 30px;
   width: 150px;
-  background-color: #6d6d6d;
+  background-color: #6d6d6d57;
   border: 0.5px solid black;
   border-radius: 5px;
   display: flex;
@@ -101,6 +101,7 @@ main img {
   transform: translate(-50%, -50%);
   height: auto;
   width: 800px;
+  filter: brightness(30%);
   z-index: -1;
 }
 
@@ -118,13 +119,13 @@ main .info h4 {
   margin-right: auto;
   height: 60px;
   width: 65%;
-  top: 70px;
+  top: 80px;
   display: grid;
   place-items: center;
   font-size: 230%;
   color: #000;
   font-family: Arial Black;
-  background-color: #e6ff03c5;
+  background: linear-gradient( to right, #f12711b6, #f5af19af);
   box-shadow: 0 0 6px gray;
   border-radius: 30px;
   z-index: 2;
@@ -136,12 +137,12 @@ main .info ul {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  font-size: 1.9rem;
-  padding: 80px 5px 10px 10%;
+  font-size: 1.85rem;
+  padding: 90px 5px 10px 10%;
   border-radius: 10px;
   color: #ffd036;
   text-shadow: 1px 1px 2px #ffd040;
-  background-color: rgba(128, 128, 128, 0.363);
+  background-color: rgba(128, 128, 128, 0.313);
   box-shadow:0 0 6px #ffd036;
   z-index: 1;
 }
@@ -158,6 +159,7 @@ main .info ul li a{
 }
 
 main .info ul li a:hover{
+  transition: 0.2s ease-in-out;
   font-size: 2.5rem;
   color: hsl(46, 65%, 56%);
   text-shadow: 1px 10px 10px #a58629;
@@ -170,6 +172,7 @@ main .info > div{
 }
 
 main .info > div ul:hover{
+  transition: 1.0s ease-in-out;
   border: 10px #c98124;
   box-shadow:0 0 100px #ffd036;
 }
@@ -213,17 +216,21 @@ footer p {
   header .contact  a {
     display:none;
   }
+  main{
+    height: 2200px;
+  }
   main .info{
     grid-template-columns: auto;
     margin: 5px;
     row-gap: 25px;
   }
   main .info div h4{
-    height: 40px;
-    font-size: 1.5rem;
+    height: 50px;
+    font-size: 1.9rem;
   }
   main .info ul{
     margin-top: 10px;
+    font-size: 1.7rem;
   }
   main .info .project,
   main .info .interests{
