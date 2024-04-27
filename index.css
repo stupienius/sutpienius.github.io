@@ -138,7 +138,7 @@ main .info ul {
   margin-left: auto;
   margin-right: auto;
   font-size: 1.85rem;
-  padding: 90px 5px 10px 10%;
+  padding: 100px 5px 10px 50px;
   border-radius: 10px;
   color: #ffd036;
   text-shadow: 1px 1px 2px #ffd040;
@@ -217,20 +217,22 @@ footer p {
     display:none;
   }
   main{
-    height: 2200px;
+    height: 2400px;
   }
   main .info{
     grid-template-columns: auto;
-    margin: 5px;
-    row-gap: 25px;
+    margin: 30px;
+    row-gap: 60px;
   }
   main .info div h4{
     height: 50px;
     font-size: 1.9rem;
+    font-weight: 700;
   }
   main .info ul{
     margin-top: 10px;
-    font-size: 1.7rem;
+    padding: 85px 5px 10px 30px;
+    font-size: 1.3rem;
   }
   main .info .project,
   main .info .interests{
