@@ -48,6 +48,10 @@ header h2{
     text-align: center;
 }
 
+.hide {
+    display: none;
+}
+
 .container {
     position: relative;
     display: flex;
@@ -55,7 +59,7 @@ header h2{
     gap: 5px;
 }
 
-.container main{
+.container main{ 
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -66,4 +70,8 @@ header h2{
     width: 600px;
     height: 300px;
     background-color: gray;
+}
+
+.container aside{
+    background-color: aqua;
 }
