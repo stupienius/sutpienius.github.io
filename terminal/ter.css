@@ -1,0 +1,51 @@
+body {
+    font-family: monospace;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.terminal {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+.terminal .container{
+    display: flex;
+    flex-direction: row;
+}
+
+.terminal .container .prompt {
+    display: flex;
+    flex-direction: row;
+    color: #0f0;
+}
+
+.command-input{
+    resize: none;
+}
+
+.terminal .container .output-text{
+    color: white;
+} 
+
+.terminal .container .output {
+    margin-top: 10px;
+}
+
+.terminal .container .input-line {
+    display: flex;
+}
+
+.terminal .container .input-line input[type="text"] {
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-family: monospace;
+    outline: none;
+}
