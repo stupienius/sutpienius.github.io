@@ -1,9 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: monospace;
     background-color: #000;
     color: #fff;
     margin: 0;
     padding: 0;
+}
+
+#text{
+    position: absolute;
+    left: -1000px;
+    resize: none;
 }
 
 .terminal {
@@ -14,38 +27,22 @@ body {
     border-radius: 5px;
 }
 
-.terminal .container{
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.promp{
+    color: rgb(0, 167, 0);
+}
+
+.input{
     display: flex;
     flex-direction: row;
+    gap: 5px;
 }
 
-.terminal .container .prompt {
-    display: flex;
-    flex-direction: row;
-    color: #0f0;
-}
 
-.command-input{
-    resize: none;
-}
 
-.terminal .container .output-text{
-    color: white;
-} 
 
-.terminal .container .output {
-    margin-top: 10px;
-}
 
-.terminal .container .input-line {
-    display: flex;
-}
-
-.terminal .container .input-line input[type="text"] {
-    flex: 1;
-    background-color: transparent;
-    border: none;
-    color: #fff;
-    font-family: monospace;
-    outline: none;
-}
