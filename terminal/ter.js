@@ -11,7 +11,6 @@ window.addEventListener("keydown",function(){
     inputTextarea.focus();
     inputTextarea.addEventListener('input', function () {
     });
-
 });
 
 addNewCommandBlock();
@@ -29,8 +28,8 @@ function inputPrompt(textarea ,e){
             `<div class = "prompt_hit">visitor@stupienius.Web:~$ </div>
              <div class = "prompt_input">${textarea.value}</div>
              <div class = "cursor"></div>`;
-            }, 50);
-        }
+        }, 50);
+    }
 }
 
 
@@ -38,8 +37,8 @@ function executeCommand(textarea,e){
     if(e.key !== "Enter") return;
     const command = textarea.value;
     switch (command.trim()){
-        case 'welcome':
-            welcome();
+        case 'whoami':
+            addLineAnimation(whoami);
             break;
         case 'help':
             newOutput.appendChild(createOutputLine('Available commands: help, about, contact'));
@@ -52,10 +51,10 @@ function executeCommand(textarea,e){
             break;
         default:
             newOutput.appendChild(createOutputLine('Command not found'));
+            textarea.value = "";
+            removeCursor();
+            addNewCommandBlock();
     }
-    textarea.value = "";
-    removeCursor();
-    addNewCommandBlock();
 }
 
 function createOutputLine(text) {
@@ -64,8 +63,21 @@ function createOutputLine(text) {
     return outputLine;
 }
 
-function addLineAnimation(){
+function addParagraphAnimation(text){
 
+}
+
+function addLineAnimation(text){
+    text.forEach( e => {
+        for(let i=0;i<e.length;i++){
+            setTimeout(() => {
+                newOutput.innerHTML += e.charAt(i);
+            }, 1000);
+        }
+    });
+    inputTextarea.value = "";
+    removeCursor();
+    addNewCommandBlock();
 }
 
 function addNewCommandBlock(){

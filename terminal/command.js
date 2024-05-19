@@ -10,3 +10,9 @@ const asciiArt =
               |_|                             
 </pre>
 `;
+
+
+const whoami = [
+    "hello",
+    "The paradox of “Who am I?” is: we never know, but, we constantly find out."
+]
