@@ -16,6 +16,7 @@ body {
 #text{
     position: absolute;
     left: -1000px;
+    bottom: -1000px;
     resize: none;
 }
 
@@ -33,6 +34,7 @@ body {
 }
 
 .prompt_hit{
+    margin-right: 5px;
     color: rgb(0, 167, 0);
 }
 
@@ -43,8 +45,24 @@ body {
 .input{
     display: flex;
     flex-direction: row;
-    gap: 5px;
+    align-items: center;
 }
+
+.cursor{
+    height: 17px;
+    width: 2px;
+    background-color: white;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    40%, 60% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
 
 
 

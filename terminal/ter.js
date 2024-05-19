@@ -18,9 +18,19 @@ addNewCommandBlock();
 
 
 function inputPrompt(textarea ,e){
-    newInput.innerHTML = 
-    `<div class = "prompt_hit">visitor@stupienius.Web:~$ </div>
-     <div class = "prompt_input">${textarea.value}</div>`;
+    if(/^[a-zA-Z]$/.test(e.key)){
+        newInput.innerHTML = 
+        `<div class = "prompt_hit">visitor@stupienius.Web:~$ </div>
+         <div class = "prompt_input">${textarea.value}${e.key}</div>
+         <div class = "cursor"></div>`;
+    }else{
+        setTimeout(() => {
+            newInput.innerHTML = 
+            `<div class = "prompt_hit">visitor@stupienius.Web:~$ </div>
+             <div class = "prompt_input">${textarea.value}</div>
+             <div class = "cursor"></div>`;
+            }, 50);
+        }
 }
 
 
@@ -44,6 +54,7 @@ function executeCommand(textarea,e){
             newOutput.appendChild(createOutputLine('Command not found'));
     }
     textarea.value = "";
+    removeCursor();
     addNewCommandBlock();
 }
 
@@ -75,4 +86,13 @@ function addNewCommandBlock(){
     
     container.appendChild(newOutput);
     newOutput.classList.add('ouput');
+
+    newInput.innerHTML =
+    `<div class = "prompt_hit">visitor@stupienius.Web:~$ </div>
+     <div class = "cursor"></div>`
+}
+
+function removeCursor(){
+    const cursor = document.querySelectorAll(".cursor");
+    cursor.forEach(e => {e.style.display = "none";});
 }
