@@ -1,21 +1,36 @@
-const asciiArt =
-`<pre>
-                     _            _           
-     _              (_)          (_)          
- ___| |_ _   _ _ __  _  ___ _ __  _ _   _ ___ 
-/ __| __| | | | '_ \| |/ _ \ '_ \| | | | / __|
-\__ \ |_| |_| | |_) | |  __/ | | | | |_| \__ \
-|___/\__|\__,_| .__/|_|\___|_| |_|_|\__,_|___/
-              | |                             
-              |_|                             
-</pre>
-`;
+const terminl = document.querySelector('.terminal');
+const inputTextarea = document.querySelector("#text");
 
 
-function executeCommand(command,newOutput) {
+let newCommand;
+let newInput;
+let newOutput;
+let container;
+
+window.addEventListener("keydown",function(){
+    inputTextarea.focus();
+    inputTextarea.addEventListener('input', function () {
+    });
+
+});
+
+addNewCommandBlock();
 
 
-    switch (command.trim()) {
+function inputPrompt(textarea ,e){
+    newInput.innerHTML = 
+    `<div class = "prompt_hit">visitor@stupienius.Web:~$ </div>
+     <div class = "prompt_input">${textarea.value}</div>`;
+}
+
+
+function executeCommand(textarea,e){
+    if(e.key !== "Enter") return;
+    const command = textarea.value;
+    switch (command.trim()){
+        case 'welcome':
+            welcome();
+            break;
         case 'help':
             newOutput.appendChild(createOutputLine('Available commands: help, about, contact'));
             break;
@@ -28,19 +43,8 @@ function executeCommand(command,newOutput) {
         default:
             newOutput.appendChild(createOutputLine('Command not found'));
     }
-
-    window.removeEventListener("keydown",function(){
-        inputTextarea.focus();
-        inputTextarea.addEventListener('input', function () {
-            const text = this.value;
-            const paragraphs = text.split('\n').map(line => `<p>${line}</p>`).join('');
-            newInput.innerHTML = '$ ' + paragraphs;
-        });
-    
-    });
-    document.getElementById('text').removeEventListener('keydown',handleKeyDown);
-
-    main();
+    textarea.value = "";
+    addNewCommandBlock();
 }
 
 function createOutputLine(text) {
@@ -49,28 +53,11 @@ function createOutputLine(text) {
     return outputLine;
 }
 
+function addLineAnimation(){
 
-const terminl = document.querySelector('.terminal');
-const inputTextarea = document.querySelector('#text');
+}
 
-
-let newCommand;
-let newInput;
-let newOutput;
-let container;
-
-const handleKeyDown = function(e) {
-
-    if (e.key === 'Enter') {
-        e.preventDefault();
-        const command = this.value;
-        executeCommand(command, newOutput);
-        this.value = '';
-    }
-};
-
-function main(){
-
+function addNewCommandBlock(){
     newCommand = null;
     newInput = null;
     newOutput = null;
@@ -88,25 +75,4 @@ function main(){
     
     container.appendChild(newOutput);
     newOutput.classList.add('ouput');
-    
-
-    newInput.innerHTML = `<div class="promp">visitor@stupienius.Web:~$ </div>`;
-
-    window.addEventListener("keydown",function(){
-        inputTextarea.focus();
-        inputTextarea.addEventListener('input', function () {
-            const text = this.value;
-            const paragraphs = text.split('\n').map(line => `<p>${line}</p>`).join('');
-            newInput.innerHTML = `<div class="promp">visitor@stupienius.Web:~$ </div>` + paragraphs;
-        });
-    
-    });
-    
-    
-    document.getElementById('text').addEventListener('keydown',handleKeyDown);
-
 }
-
-
-
-main();
