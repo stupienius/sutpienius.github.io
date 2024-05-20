@@ -38,10 +38,10 @@ function executeCommand(textarea,e){
     const command = textarea.value;
     switch (command.trim()){
         case 'whoami':
-            addLineAnimation(whoami);
+            addParagraphAnimation(whoami);
             break;
         case 'help':
-            newOutput.appendChild(createOutputLine('Available commands: help, about, contact'));
+            addParagraphAnimation(help);
             break;
         case 'about':
             newOutput.appendChild(createOutputLine('This is a terminal-like website example.'));
@@ -51,34 +51,41 @@ function executeCommand(textarea,e){
             break;
         default:
             newOutput.appendChild(createOutputLine('Command not found'));
-            textarea.value = "";
-            removeCursor();
-            addNewCommandBlock();
     }
 }
 
-function createOutputLine(text) {
+function toNextCommand(){
+    inputTextarea.value = "";
+    removeCursor();
+    addNewCommandBlock();
+}
+
+function createOutputLine(text){
     const outputLine = document.createElement('div');
     outputLine.textContent = text;
     return outputLine;
 }
 
-function addParagraphAnimation(text){
-
+async function addParagraphAnimation(text) {
+    for (const line of text) {
+      await addLineAnimation(line);
+    }
+    toNextCommand();
 }
 
-function addLineAnimation(text){
-    text.forEach( e => {
-        for(let i=0;i<e.length;i++){
-            setTimeout(() => {
-                newOutput.innerHTML += e.charAt(i);
-            }, 1000);
+async function addLineAnimation(text){
+    for (let i=0; i < text.length; i++) {
+        await new Promise(resolve => setTimeout(resolve, 10));
+        if(text.charAt(i) == " " && text.charAt(i + 1) == " "){
+            t += "&nbsp;&nbsp;";
+            i++;
+        }else{
+            newOutput.innerHTML += text.charAt(i);
         }
-    });
-    inputTextarea.value = "";
-    removeCursor();
-    addNewCommandBlock();
+    }
+    newOutput.innerHTML += "<br>";
 }
+
 
 function addNewCommandBlock(){
     newCommand = null;

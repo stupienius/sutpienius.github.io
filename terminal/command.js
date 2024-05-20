@@ -12,7 +12,11 @@ const asciiArt =
 `;
 
 
-const whoami = [
-    "hello",
-    "The paradox of “Who am I?” is: we never know, but, we constantly find out."
-]
+const whoami =  [
+    "The paradox of “Who am I?” is: we never know, but, we constantly find out.",
+    "hahahahahahah"
+];
+
+const help = [
+"help        output this",
+"contact     find me in internet"];

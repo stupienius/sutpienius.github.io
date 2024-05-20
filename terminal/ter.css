@@ -52,14 +52,14 @@ body {
     height: 17px;
     width: 2px;
     background-color: white;
-    animation: blink 1s infinite;
+    animation: blink 1.5s infinite;
 }
 
 @keyframes blink {
-    40%, 60% {
+    0%, 50% {
       opacity: 1;
     }
-    50% {
+    51%, 99% {
       opacity: 0;
     }
   }
