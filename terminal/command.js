@@ -1,6 +1,6 @@
 const asciiArt =[
 "                       _            _ ",           
-"       _              (_)          (_) ",          
+"       _              |_|          |_| ",          
 "   ___| |_ _   _ _ __  _  ___ _ __  _ _   _ ___", 
 "  / __| __| | | | '_ \\| |/ _ \\ '_ \\| | | | / __|",
 "  \\__ \\ |_| |_| | |_) | |  __/ | | | | |_| \\__ \\ ",
@@ -15,15 +15,19 @@ const whoami =  [
 ];
 
 const help = [
-    "help           Show command helper",
-    "contact        About my social contact",
-    "projects       Show my projects",
-    "who            Who is stupienius",
-    "whoami         Who are you",
-    "song           Lsten to music",
-    "game           Good phone game recommend to you",
-    "secret         Find the password",
-    "banner         Display the header",
-    "history        Your command history",
-    "singer         Best singer ever"
+    "(color1)<help>           Show command helper",
+    "(color1)<contact>        About my social contact",
+    "(color1)<projects>       Show my projects",
+    "(color1)<who>            Who is stupienius",
+    "(color1)<whoami>         Who are you",
+    "(color1)<song>           Listen to music",
+    "(color1)<game>           Good phone game recommend to you",
+    "(color1)<secret>         Find the password",
+    "(color1)<banner>         Display the header",
+    "(color1)<history>        Your command history",
+    "(color1)<singer>         Best singer ever"
 ];
+
+const test = [`(color1)<test>`];
+
+

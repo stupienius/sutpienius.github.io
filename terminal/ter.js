@@ -31,7 +31,7 @@ function inputPrompt(textarea ,e){
             `<div class = "prompt_hit">visitor@stupienius.Web:~$ </div>
              <div class = "prompt_input">${textarea.value}</div>
              <div class = "cursor"></div>`;
-        }, 50);
+        }, 20);
     }
 }
 
@@ -46,6 +46,9 @@ function executeCommand(textarea,e){
             break;
         case 'help':
             addParagraphAnimation(help);
+            break;
+        case 'test':
+            addParagraphAnimation(test);
             break;
         case 'about':
             newOutput.appendChild(createOutputLine('This is a terminal-like website example.'));
@@ -80,16 +83,38 @@ async function addParagraphAnimation(text) {
 }
 
 async function addLineAnimation(text){
+    const p = document.createElement("p");
+    newOutput.appendChild(p);
+    let color = "";
+    let inLabel = false;
+    const a = document.createElement("div");
     for (let i=0; i < text.length; i++) {
-        await new Promise(resolve => setTimeout(resolve, 10));
-        if(text.charAt(i) == " " && text.charAt(i + 1) == " "){
-            newOutput.innerHTML += "&nbsp;&nbsp;";
+        await new Promise(resolve => setTimeout(resolve, 5));
+        if(text.charAt(i) === " " && text.charAt(i + 1) === " "){
+            p.innerHTML += "&nbsp;&nbsp;";
             i++;
         }else{
-            newOutput.innerHTML += text.charAt(i);
+            if(text.charAt(i) === "("){
+                i++;
+                for(;text.charAt(i) !== ")";i++){
+                    color += text.charAt(i);
+                }
+                i++;
+                p.appendChild(a);
+                a.classList.add(color);
+            }
+            if(text.charAt(i) === "<" || text.charAt(i) === ">"){
+                inLabel = !inLabel;
+                i++; 
+            }
+            if(inLabel){
+                a.innerHTML += text.charAt(i);
+            }else{
+                p.innerHTML += text.charAt(i);
+            }
         }
     }
-    newOutput.innerHTML += "<br>";
+    p.innerHTML += "<br>";
     window.scrollTo(0, document.body.offsetHeight);
 }
 
