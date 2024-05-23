@@ -3,10 +3,7 @@ const inputTextarea = document.querySelector("#text");
 
 
 let isAnimation = false;
-let newCommand;
-let newInput;
-let newOutput;
-let container;
+let newCommand,newInput,newOutput,container;
 
 window.addEventListener("keydown",function(){
     inputTextarea.focus();
@@ -47,14 +44,37 @@ function executeCommand(textarea,e){
         case 'help':
             addParagraphAnimation(help);
             break;
-        case 'test':
-            addParagraphAnimation(test);
+        case 'who':
+            addParagraphAnimation(who);
             break;
-        case 'about':
-            newOutput.appendChild(createOutputLine('This is a terminal-like website example.'));
+        case 'who':
+            addParagraphAnimation(who);
+            break;
+        case 'project':
+            addParagraphAnimation(project);
             break;
         case 'contact':
-            newOutput.appendChild(createOutputLine('Contact us at example@example.com'));
+            addParagraphAnimation(contact);
+            break;
+        case 'singer':
+            addParagraphAnimation(["Must be Post Malone!!!!"]);
+            newTab("https://www.postmalone.com/")
+            break;
+        case 'github':
+            addParagraphAnimation(["opening github..."]);
+            newTab("https://github.com/stupienius");
+            break;
+        case 'facebook':
+            addParagraphAnimation(["opening facebook..."]);
+            newTab("https://www.facebook.com/profile.php?id=100053935834116");
+            break;
+        case 'instagram':
+            addParagraphAnimation(["opening instagram..."]);
+            newTab("https://www.instagram.com/stupienius/");
+            break;
+        case 'x':
+            addParagraphAnimation(["opening x..."]);
+            newTab("https://twitter.com/stupienius");
             break;
         default:
             addParagraphAnimation(["command not find"]);
@@ -82,26 +102,35 @@ async function addParagraphAnimation(text) {
     toNextCommand();
 }
 
-async function addLineAnimation(text){
+async function addLineAnimation(text){                      
     const p = document.createElement("p");
     newOutput.appendChild(p);
     let color = "";
+    let link = "";
     let inLabel = false;
-    const a = document.createElement("div");
+    const a = document.createElement("a");
     for (let i=0; i < text.length; i++) {
         await new Promise(resolve => setTimeout(resolve, 5));
         if(text.charAt(i) === " " && text.charAt(i + 1) === " "){
             p.innerHTML += "&nbsp;&nbsp;";
             i++;
         }else{
-            if(text.charAt(i) === "("){
+            if(text.charAt(i) === "("){                                //(class,href)<content>
+                i++;
+                for(;text.charAt(i) !== ",";i++){
+                    color += text.charAt(i);
+                }
                 i++;
                 for(;text.charAt(i) !== ")";i++){
-                    color += text.charAt(i);
+                    link += text.charAt(i);
                 }
                 i++;
                 p.appendChild(a);
                 a.classList.add(color);
+                if(link.length > 0){
+                    a.href = link;
+                    a.target = '_blank'
+                }
             }
             if(text.charAt(i) === "<" || text.charAt(i) === ">"){
                 inLabel = !inLabel;
@@ -116,6 +145,12 @@ async function addLineAnimation(text){
     }
     p.innerHTML += "<br>";
     window.scrollTo(0, document.body.offsetHeight);
+}
+
+function newTab(link){
+    setTimeout(function() {
+      window.open(link, "_blank");
+    }, 500);
 }
 
 
