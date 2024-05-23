@@ -12,7 +12,7 @@ window.addEventListener("keydown",function(){
 });
 
 addNewCommandBlock();
-addParagraphAnimation(asciiArt);
+addParagraphAnimation(banner);
 
 
 function inputPrompt(textarea ,e){
@@ -37,6 +37,7 @@ function executeCommand(textarea,e){
     if(isAnimation) return ;
     if(e.key !== "Enter") return;
     const command = textarea.value;
+    history.push(command);
     switch (command.trim()){
         case 'whoami':
             addParagraphAnimation(whoami);
@@ -55,6 +56,15 @@ function executeCommand(textarea,e){
             break;
         case 'contact':
             addParagraphAnimation(contact);
+            break;
+        case 'banner':
+            addParagraphAnimation(banner);
+            break;
+        case 'game':
+            addParagraphAnimation(game);
+            break;
+        case 'history':
+            addParagraphAnimation(history);
             break;
         case 'singer':
             addParagraphAnimation(["Must be Post Malone!!!!"]);
@@ -83,7 +93,6 @@ function executeCommand(textarea,e){
 
 function toNextCommand(){
     inputTextarea.value = "";
-    removeCursor();
     addNewCommandBlock();
 }
 
@@ -94,6 +103,7 @@ function createOutputLine(text){
 }
 
 async function addParagraphAnimation(text) {
+    removeCursor();
     isAnimation = true;
     for (const line of text) {
       await addLineAnimation(line);
@@ -110,7 +120,7 @@ async function addLineAnimation(text){
     let inLabel = false;
     const a = document.createElement("a");
     for (let i=0; i < text.length; i++) {
-        await new Promise(resolve => setTimeout(resolve, 5));
+        await new Promise(resolve => setTimeout(resolve, 1));
         if(text.charAt(i) === " " && text.charAt(i + 1) === " "){
             p.innerHTML += "&nbsp;&nbsp;";
             i++;
