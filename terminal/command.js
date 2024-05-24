@@ -57,7 +57,6 @@ const help = [
     "(color1,)<whoami>         Who are you",
     "(color1,)<song>           Listen to music",
     "(color1,)<game>           Good phone game recommend to you",
-    "(color1,)<secret>         Find the password",
     "(color1,)<banner>         Display the header",
     "(color1,)<history>        Your command history",
     "(color1,)<singer>         Best singer ever"
@@ -98,6 +97,10 @@ const game = [
 const project = [
     "go to (color1,https://github.com/stupienius)<github> to see my whole preject."
 ];
+
+const song = [
+    "best song ever"
+]
 
 let history = [];
 

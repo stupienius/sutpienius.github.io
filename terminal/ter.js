@@ -48,11 +48,12 @@ function executeCommand(textarea,e){
         case 'who':
             addParagraphAnimation(who);
             break;
-        case 'who':
-            addParagraphAnimation(who);
-            break;
         case 'project':
             addParagraphAnimation(project);
+            break;
+        case 'song':
+            addParagraphAnimation(song);
+            newTab("https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUJcmljayByb29s")
             break;
         case 'contact':
             addParagraphAnimation(contact);
